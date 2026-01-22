@@ -1,28 +1,103 @@
 body {
   margin-top: 0px;
   margin-left: 0px;
-  background-color: #E0AFA0;
+  display: flex;
+  background-color: #343A40;
   font-family: "Inter", sans-serif;
+  align-items: flex-start;
 }
 
 .sidebar {
   height: 100vh;
-  max-width: 200px;
-  background-color: #8A817C;
+  max-width: 160px;
+  background-color: #212529;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-left: 3px;
+  padding-top: 20px;
+  padding-right: 3px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .sidebar-nav {
-  color: #F4F3EE;
+  color: #F8F9FA;
   display: block;
   text-decoration: none;
   border-radius: 20px;
   padding: 10px;
+  font-size: 14px;
 }
 
 .sidebar-nav:hover {
-  background-color: #BCB8B1
+  background-color: #6C757D;
 }
 
 .icons {
-  color: white;
+  color: #F8F9FA;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+#greeting {
+  color: #F8F9FA;
+  font-weight: 600;
+  display: block;
+  padding: 20px;
+  font-size: 50px;
+  margin: 0px;
+}
+
+#dashboard {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-color: black;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.dashboard-element {
+  flex-grow: 1;
+  border-style: solid;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  color: #F8F9FA;
+  border-radius: 8px;
+}
+
+.weekly-recap {
+  font-size: 12px;
+  width: 800px;
+}
+
+.recap-header {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #ADB5BD;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+
+}
+
+.progress-bar {
+  width: 20%;
+  height: 100%;
+  background-color: #7da182;
+  border-radius: 8px 0 0 8px;
 }
