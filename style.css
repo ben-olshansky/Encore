@@ -52,52 +52,111 @@ body {
   padding: 20px;
   font-size: 50px;
   margin: 0px;
+  text-overflow: ellipsis;
 }
 
 #dashboard {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  border-style: solid;
-  border-color: black;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-left: 20px;
   margin-right: 10px;
   margin-bottom: 10px;
-  gap: 10px;
+  gap: 12px;
 }
 
 .dashboard-element {
-  flex-grow: 1;
   border-style: solid;
   display: flex;
-  height: 40px;
-  width: 40px;
   color: #F8F9FA;
+  border-color: #ADB5BD;
   border-radius: 8px;
+  max-height: 200px;
 }
 
 .weekly-recap {
   font-size: 12px;
-  width: 800px;
+  grid-column: span 3;
+  flex-direction: column;
+  height: 200px;
+  min-width: 400px;
 }
 
 .recap-header {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 15px;
+  margin: 0px 0px 20px 0px;
+  width: 100%;
 }
 
 .progress-container {
-  width: 100%;
+  width: 95%;
   background-color: #ADB5BD;
   border-radius: 8px;
-  overflow: hidden;
-  height: 20px;
-
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .progress-bar {
   width: 20%;
   height: 100%;
-  background-color: #7da182;
+  background-color: #50a75b;
   border-radius: 8px 0 0 8px;
+  display: flex;
+  align-items: center;
+}
+
+.percentage {
+  padding-left: 30px;
+  margin: 0px;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.streak {
+  grid-column: span 1;
+  height: 200px;
+}
+
+.achievements {
+  grid-column: span 1;
+  height: 200px;
+}
+
+.log {
+  grid-column: span 1;
+  height: 200px;
+}
+
+.log-button {
+  margin: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 18px;
+  background-color: #50a75b;
+  color: #F8F9FA;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+
+.log-button:hover {
+  /*background-color: #459449;*/
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.log-button:active {
+  opacity: 0.7;
+}
+
+.past-sessions {
+  grid-column: span 2;
+  height: 200px;
+}
+
+.top-pieces {
+  grid-column: span 2;
+  height: 200px;
 }
