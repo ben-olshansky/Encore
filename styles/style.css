@@ -38,7 +38,7 @@ body {
   color: #F8F9FA;
 }
 
-#main-content {
+.main-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -139,10 +139,13 @@ body {
   font-size: 30px;
   border: none;
   outline: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .log-button:hover {
-  /*background-color: #459449;*/
   opacity: 0.8;
   cursor: pointer;
 }
