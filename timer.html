@@ -8,19 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>Practice Timer - Encore</title>
+  <title>New Session - Encore</title>
 </head>
 <body>
   <div id="time">
     <button class="exit">X</button>
-    <span class="digit" id="hr">00</span>
-    <span class="colon">:</span>
-    <span class="digit" id="min">00</span>
-    <span class="colon">:</span>
-    <span class="digit" id="sec">00</span>
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
-    <button id="finish">Finish</button>
+    <div class="timer-display">
+      <span class="digit" id="hr">00</span>
+      <span class="digit">:</span>
+      <span class="digit" id="min">00</span>
+      <span class="digit">:</span>
+      <span class="digit" id="sec">00</span>
+    </div>
+    <div class="button-container">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="finish">Save Session</button>
+    </div>
   </div>
 <script src="timer.js"></script>
 </body>

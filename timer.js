@@ -34,12 +34,15 @@ async function stopwatch () {
       await wait(1000);
       seconds += 1;
 
-      minutes = Math.floor(seconds/60);
-      seconds = seconds % 60; 
-
-      hours = Math.floor(minutes/60);
-      minutes = minutes % 60;
-
+      if (seconds == 60) {
+        minutes = Math.floor(seconds/60);
+        seconds = seconds % 60; 
+      }
+      
+      if (minutes == 60) {
+        hours = Math.floor(minutes/60);
+        minutes = minutes % 60;
+      }
       updateDisplay()
     }
     else {
@@ -53,11 +56,20 @@ function updateDisplay () {
   if (hours < 10) {
     hrString = '0' + String(hours);
   }
+  else {
+    hrString = String(hours)
+  }
   if (minutes < 10) {
     minString = '0' + String(minutes);
   }
+  else {
+    minString = String(minutes)
+  }
   if (seconds < 10) {
     secString = '0' + String(seconds);
+  }
+  else {
+    secString = String(seconds)
   }
 
   //write to html
