@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/03c9193342.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/timer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>Timer - Encore</title>
+  <title>Practice Timer - Encore</title>
 </head>
 <body>
-  
+  <div id="time">
+    <button class="exit">X</button>
+    <span class="digit" id="hr">00</span>
+    <span class="colon">:</span>
+    <span class="digit" id="min">00</span>
+    <span class="colon">:</span>
+    <span class="digit" id="sec">00</span>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="finish">Finish</button>
+  </div>
+<script src="timer.js"></script>
 </body>
 </html>
