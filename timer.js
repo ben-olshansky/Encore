@@ -35,12 +35,12 @@ async function stopwatch () {
       seconds += 1;
 
       if (seconds == 60) {
-        minutes = Math.floor(seconds/60);
+        minutes += Math.floor(seconds/60);
         seconds = seconds % 60; 
       }
       
       if (minutes == 60) {
-        hours = Math.floor(minutes/60);
+        hours += Math.floor(minutes/60);
         minutes = minutes % 60;
       }
       updateDisplay()
@@ -76,4 +76,10 @@ function updateDisplay () {
   document.getElementById('hr').innerHTML = hrString
   document.getElementById('min').innerHTML = minString
   document.getElementById('sec').innerHTML = secString
+}
+
+function exitSession () {
+  if (confirm("WARNING: Are you sure you want to leave? Your current session will be lost.")) {
+    window.location.href = 'index.html';
+  }
 }
