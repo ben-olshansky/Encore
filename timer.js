@@ -21,9 +21,17 @@ startBtn.addEventListener('click', function () {
 });
 pauseBtn.addEventListener('click', function () {
   timer = false;
+  running = false;
 });
 finishBtn.addEventListener('click', function () {
   timer = false;
+  running = false
+
+  const sessionData = {
+    duration: {hours: hours, minutes: minutes, seconds: seconds},
+    date: new Date()
+  }
+  console.log(sessionData);
 });
 
 //stopwatch function
